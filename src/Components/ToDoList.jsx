@@ -26,10 +26,10 @@ const ToDoList = () => {
     setEditBtn(false);
   };
   const editSave = () => {
-    dispatch(editSaveData({ id: editId, work: mytask }));
+    dispatch(editSaveData({ id: editId, work: mytask}));
+    setEditBtn(true);
     setEditId(editId);
     setMytsk(work);
-    setEditBtn(true);
   };
 
   let sno = 0;
@@ -56,7 +56,7 @@ const ToDoList = () => {
                 style={{
                   fontWeight: "bold",
                   backgroundColor: "transparent",
-                  color:'blue'
+                  color:'orange'
                 }}
               >
                 {key.work}
@@ -65,7 +65,7 @@ const ToDoList = () => {
           </td>
           <td>
             {key.status ? (
-              <button
+              <button id="btn"
                 onClick={() => {
                   dispatch(uncomplete(key.id));
                 }}
@@ -73,7 +73,7 @@ const ToDoList = () => {
                 Uncomplete
               </button>
             ) : (
-              <button
+              <button id="btn"
                 onClick={() => {
                   dispatch(complete(key.id));
                 }}
@@ -83,7 +83,7 @@ const ToDoList = () => {
             )}
           </td>
           <td>
-            <button
+            <button id="btn"
               onClick={() => {
                 recDelete(key.id);
               }}
@@ -92,9 +92,9 @@ const ToDoList = () => {
             </button>
           </td>
           <td>
-            <button
+            <button id="btn"
               onClick={() => {
-                editData(key.id, key.work);
+                editData(key.id, key.work,key.status);
               }}
             >
               Edit Data
@@ -140,7 +140,7 @@ const ToDoList = () => {
           }
         </Form>
         <div id="table">
-          <Table striped bordered hover variant="dark" border="">
+          <Table striped bordered hover border="">
             <thead>
               <tr>
                 <th>Id</th>

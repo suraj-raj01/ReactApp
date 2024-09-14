@@ -40,17 +40,17 @@ const Slice = createSlice({
                 }
             }
         },
-        editSaveData:(state,actions)=>{
-            for(let i=0; i<state.task.length; i++){
-                if(state.task[i].id == actions.payload.id){
-                    state.task[i].work = actions.payload.work;
-                }
-            }
-        },
         uncomplete:(state,actions)=>{
             for(let i=0; i<state.task.length; i++){
                 if(state.task[i].id == actions.payload){
                     state.task[i].status = false;
+                }
+            }
+        },
+        editSaveData:(state,actions)=>{
+            for(let i=0; i<state.task.length; i++){
+                if(state.task[i].id == actions.payload.id){
+                    state.task[i].work = actions.payload.work;
                 }
             }
         },

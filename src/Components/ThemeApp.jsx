@@ -21,9 +21,9 @@ const ThemeApp = () =>{
             <Button variant="info" onClick={()=>{dispatch(changeColor(clr))}}>change</Button>
             </div>
 
-            <Button variant="info" onClick={()=>{dispatch(changeColor1())}}>ChangeColor1</Button>
+            {/* <Button variant="info" onClick={()=>{dispatch(changeColor1())}}>ChangeColor1</Button>
             <Button variant="info" onClick={()=>{dispatch(changeColor2())}}>ChangeColor2</Button>
-            <Button variant="info" onClick={()=>{dispatch(changeColor3())}}>ChangeColor3</Button>
+            <Button variant="info" onClick={()=>{dispatch(changeColor3())}}>ChangeColor3</Button> */}
         </div>
         </>
     )

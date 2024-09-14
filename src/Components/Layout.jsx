@@ -13,7 +13,7 @@ const Layout = () => {
       <Navbar collapseOnSelect expand="lg">
         <Container>
           <Navbar.Brand as={Link} to="home" id="header">
-            REACT-TEST
+            REACT-APP
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
