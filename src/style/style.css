@@ -40,7 +40,16 @@ th{
 td{
     font-weight: bold;
     text-align: center;
-    padding: 5px 0px;
+    padding: 12px 0px;
+}
+span{
+    cursor: pointer;
+    border-radius: 2px;
+    font-weight: normal;
+}
+span:hover{
+    background-color: green;
+    color: white;
 }
 #footer{
     height: 9vh;
@@ -54,6 +63,9 @@ td{
     background-color: #fafafa;
 }
 @media(max-width:500px){
+    #table{
+        width: 90%;
+    }
     th{
         font-size: 10px;
     }

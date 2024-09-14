@@ -56,7 +56,7 @@ const ToDoList = () => {
                 style={{
                   fontWeight: "bold",
                   backgroundColor: "transparent",
-                  color:'orange'
+                  color:'red'
                 }}
               >
                 {key.work}
@@ -65,40 +65,40 @@ const ToDoList = () => {
           </td>
           <td>
             {key.status ? (
-              <button id="btn"
+              <span
                 onClick={() => {
                   dispatch(uncomplete(key.id));
                 }}
               >
                 Uncomplete
-              </button>
+              </span>
             ) : (
-              <button id="btn"
-                onClick={() => {
-                  dispatch(complete(key.id));
-                }}
+              <span
+              onClick={() => {
+                dispatch(complete(key.id));
+              }}
               >
-                Complete
-              </button>
+                complete
+              </span>
             )}
           </td>
           <td>
-            <button id="btn"
+            <span
               onClick={() => {
                 recDelete(key.id);
               }}
             >
               Delete
-            </button>
+            </span>
           </td>
           <td>
-            <button id="btn"
+            <span
               onClick={() => {
                 editData(key.id, key.work,key.status);
               }}
             >
               Edit Data
-            </button>
+            </span>
           </td>
         </tr>
       </>
