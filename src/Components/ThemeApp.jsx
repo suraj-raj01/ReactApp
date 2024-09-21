@@ -18,7 +18,7 @@ const ThemeApp = () =>{
                 type="text" value={clr} onChange={(e)=>{setClr(e.target.value)}}
             />
             </Form>
-            <Button variant="info" onClick={()=>{dispatch(changeColor(clr))}}>change</Button>
+            <Button variant="outline-primary" onClick={()=>{dispatch(changeColor(clr))}}>change</Button>
             </div>
 
             {/* <Button variant="info" onClick={()=>{dispatch(changeColor1())}}>ChangeColor1</Button>
